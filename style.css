@@ -1,0 +1,85 @@
+/* Pengaturan Dasar untuk Seluruh Halaman */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Mulai dari transparan/tidak terlihat */
+  }
+  to {
+    opacity: 1; /* Berakhir dengan terlihat sepenuhnya */
+  }
+}
+
+body {
+    background-color: #edeae4; /* Warna latar belakang krem */
+    font-family: 'Courier New', Courier, monospace; /* Jenis font yang mirip dengan mesin tik */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Memastikan body mengisi seluruh tinggi layar */
+    color: #5d534a; /* Warna teks utama */
+    overflow: hidden; /* Mencegah scroll jika gambar keluar dari layar */
+}
+
+/* Kontainer untuk Konten Utama */
+.content {
+    text-align: center;
+}
+
+/* Gaya untuk Judul Utama */
+h1 {
+    font-family: 'anton', serif;
+    font-size: 70px;
+    letter-spacing: 10px; /* Memberi jarak antar huruf */
+    font-weight: bold;
+    margin-bottom: 40px; /* Jarak bawah dari judul ke menu */
+    animation : fadeIn 1s ease-in-out; /* Animasi muncul dengan durasi 1 detik */
+}
+
+/* Pengaturan untuk Menu Navigasi */
+nav ul {
+    list-style: none; /* Menghilangkan titik-titik daftar */
+    padding: 0;
+    display: flex; /* Membuat item menu berjajar horizontal */
+    justify-content: center;
+    gap: 95px; /* Jarak antar item menu */
+    animation : fadeIn 1s ease-in-out 0.5s; /* Animasi muncul dengan durasi 1 detik */
+    animation-fill-mode : backwards; /* Animasi berjalan ke arah belakang */
+}
+
+nav ul li a {
+    font-family: 'belleza', roboto;
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+    color: #a78972; /* Warna link sama dengan teks utama */
+    font-size: 20px;
+    font-weight: 100;
+}
+
+/* Pengaturan untuk Gambar Dekoratif di Pojok */
+.corner-img {
+    position: absolute; /* Posisi absolut relatif terhadap body */
+    width: 150px; /* Atur ukuran gambar sesuai kebutuhan */
+    height: auto;
+    opacity: 0.7; /* Membuat gambar sedikit transparan */
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.top-right {
+    top: 20px;
+    right: 20px;
+    transform: scaleX(-1); /* Membalik gambar kamera secara horizontal */
+}
+
+.bottom-left {
+    bottom: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px;
+}
